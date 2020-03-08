@@ -1,0 +1,99 @@
+#include<stdio.h>
+#include<iostream>
+int main()
+{
+	int year,month,day1,day2;//year:出生年份，month:出生月份，day1:出生日期，day2:当前所在的日期。
+	int a,b,c,P,E,I;//P是physical rhythm的简写，是体力节律;E是emotional rhythm的简写，是情绪节律；I是rhythm of intelligence的简写，是智力节律。
+	printf("Please Input year,month,day1,day2:");
+	scanf("%d%d%d%d",&year,&month,&day1,&day2);
+	if((year%4==0)&&(year%100!=0)||(year%400==0))
+	{
+	if(month=1)  a=day1;
+	if(month=2)  a=31+day1;
+	if(month=3)  a=60+day1;
+    if(month=4)  a=91+day1;
+	if(month=5)  a=121+day1;
+	if(month=6)  a=152+day1;
+	if(month=7)  a=182+day1;
+	if(month=8)  a=213+day1;
+	if(month=9)  a=244+day1;
+	if(month=10) a=274+day1;
+	if(month=11) a=305+day1;
+	if(month=12) a=335+day1;
+	}
+	else
+	{
+	if(month=1)  a=day1;
+	if(month=2)  a=31+day1;
+	if(month=3)  a=59+day1;
+    if(month=4)  a=90+day1;
+	if(month=5)  a=120+day1;
+	if(month=6)  a=151+day1;
+	if(month=7)  a=181+day1;
+	if(month=8)  a=212+day1;
+	if(month=9)  a=243+day1;
+	if(month=10) a=273+day1;
+	if(month=11) a=304+day1;
+	if(month=12) a=334+day1;
+	}
+	if((year%4==0)&&(year%100!=0)||(year%400==0))
+    {
+	if(month=1)  b=day2;
+	if(month=2)  b=31+day2;
+	if(month=3)  b=60+day2;
+    if(month=4)  b=91+day2;
+	if(month=5)  b=121+day2;
+	if(month=6)  b=152+day2;
+	if(month=7)  b=182+day2;
+	if(month=8)  b=213+day2;
+	if(month=9)  b=244+day2;
+	if(month=10) b=274+day2;
+	if(month=11) b=305+day2;
+	if(month=12) b=335+day2;
+	}
+	else
+	{
+	if(month=1)  b=day2;
+	if(month=2)  b=31+day2;
+	if(month=3)  b=59+day2;
+    if(month=4)  b=90+day2;
+	if(month=5)  b=120+day2;
+	if(month=6)  b=151+day2;
+	if(month=7)  b=181+day2;
+	if(month=8)  b=212+day2;
+	if(month=9)  b=243+day2;
+	if(month=10) b=273+day2;
+	if(month=11) b=304+day2;
+	if(month=12) b=334+day2;
+	}
+	c=(2020-year)*365+(2020-year)/4-a+b;
+	P=c/23;
+	E=c/28;
+	I=c/33;
+	if(P==0)
+		printf("cycle\n");  
+	else if(P<12)
+		printf("orgasm\n");
+	else if(P==12)
+		printf("critical\n");
+	else
+		printf("cow water\n");
+	if(E==0)
+		printf("cycle\n");  
+	else if(E<14)
+		printf("orgasm\n");
+	else if(E==14)
+		printf("critical\n");
+	else
+		printf("cow water\n");
+	if(I==0)
+		printf("cycle\n");  
+	else if(I<17)
+		printf("orgasm\n");
+	else if(I==17)
+		printf("critical\n");
+	else
+		printf("cow water\n");
+	system("pause");
+	return 0;
+} //cycle:周期日；orgasm:高潮日；critical:临界日；cow water:低潮日。
